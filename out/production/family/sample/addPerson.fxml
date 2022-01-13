@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AddPersonController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="581.0">
+         <top>
+            <AnchorPane prefHeight="77.0" prefWidth="581.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="60.0" layoutY="15.0" text="Nhập thông tin">
+                     <font>
+                        <Font name="Roboto Light" size="38.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="323.0" prefWidth="61.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="15.0" layoutY="35.0" text="Họ và cha(mẹ):" />
+                  <TextField fx:id="txtFather" layoutX="109.0" layoutY="30.0" prefHeight="27.0" prefWidth="371.0" />
+                  <TextField fx:id="txtname" layoutX="109.0" layoutY="76.0" prefHeight="27.0" prefWidth="369.0" />
+                  <TextField fx:id="numberChild" layoutX="109.0" layoutY="211.0" prefHeight="27.0" prefWidth="368.0" />
+                  <ChoiceBox fx:id="choice" layoutX="109.0" layoutY="169.0" prefWidth="150.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="55.0" layoutY="81.0" text="Họ tên:" />
+                  <Label layoutX="36.0" layoutY="127.0" text="Ngày sinh:" />
+                  <DatePicker fx:id="birth" layoutX="109.0" layoutY="122.0" />
+                  <Label layoutX="36.0" layoutY="174.0" text="Tình trạng:" />
+                  <Label layoutX="54.0" layoutY="216.0" text="Số con:" />
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="52.0" prefWidth="581.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="63.0" layoutY="13.0" mnemonicParsing="false" onAction="#addPerson" prefHeight="27.0" prefWidth="115.0" text="Thêm" />
+                  <Button layoutX="195.0" layoutY="13.0" mnemonicParsing="false" onAction="#loadHome" prefHeight="27.0" prefWidth="122.0" text="Trở về" />
+                  <Label fx:id="txtNotification" layoutX="346.0" layoutY="18.0" />
+               </children></AnchorPane>
+         </bottom></BorderPane>
+   </children>
+</AnchorPane>

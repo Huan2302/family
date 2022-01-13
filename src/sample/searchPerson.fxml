@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.SearchController">
+   <children>
+      <Button layoutX="418.0" layoutY="78.0" mnemonicParsing="false" onAction="#search" prefHeight="27.0" prefWidth="53.0" text="Tìm" />
+      <Button layoutX="490.0" layoutY="78.0" mnemonicParsing="false" onAction="#loadHome" text="Trở về" />
+      <Label layoutX="43.0" layoutY="83.0" text="Nhập tên:" />
+      <Label layoutX="255.0" layoutY="27.0" text="TÌM KIẾM">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="113.0" layoutY="78.0" prefHeight="27.0" prefWidth="284.0" />
+      <TableView fx:id="personTable" layoutX="43.0" layoutY="138.0" prefHeight="246.0" prefWidth="252.0">
+        <columns>
+          <TableColumn fx:id="c1Colum" prefWidth="250.0" text="Thế hệ con cháu" />
+        </columns>
+      </TableView>
+      <TableView fx:id="genTable" layoutX="297.0" layoutY="138.0" prefHeight="246.0" prefWidth="252.0">
+        <columns>
+          <TableColumn fx:id="c2Colum" prefWidth="251.0" text="Cùng thế hệ" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
