@@ -31,4 +31,14 @@ public class PersonDao extends AbstractDao<PersonModel> {
         List<PersonModel> personModels = query(sql, new PersonMapper(), name);
         return personModels.isEmpty() ? null : personModels.get(0);
     }
+
+    public int countName(String nameFather ){
+        String sql = "select count() from family where nameFather = ?";
+        return count(sql,nameFather);
+    }
+
+    public static void main(String[] args) {
+        int a = new PersonDao().countName("ten con 1");
+        System.out.println(a);
+    }
 }

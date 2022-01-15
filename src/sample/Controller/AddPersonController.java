@@ -56,9 +56,21 @@ public class AddPersonController implements Initializable {
     }
 
     public void addPerson(ActionEvent event){
+        PersonModel checkNumberChild = personDao.findById(txtFather.getText());
+        if (checkNumberChild != null){
+            if (personDao.countName(txtFather.getText()) >= checkNumberChild.getNumberChild()
+            ){
+            txtNotification.setText("Thêm thất bại "+ txtFather.getText() +
+                    " chỉ có "+ checkNumberChild.getNumberChild() +
+                    " người con");
+            return;
+            }
+        }
+
         List<PersonModel> list = personDao.findAll();
         PersonModel personModel = new PersonModel();
         personModel.setGeneration(1);
+
         for (PersonModel item: list){
             if (item.getName().equals(txtFather.getText())){
                 personModel.setGeneration(item.getGeneration()+1);

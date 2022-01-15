@@ -2,6 +2,12 @@ package sample.Model;
 
 public class PersonModel {
     private int id;
+    private String nameFather;
+    private String name;
+    private String birth;
+    private int status;
+    private int numberChild;
+    private int generation;
 
     public int getId() {
         return id;
@@ -10,14 +16,6 @@ public class PersonModel {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String nameFather;
-    private String name;
-    private String birth;
-    private int status;
-    private int numberChild;
-    private int generation;
-
     public int getGeneration() {
         return generation;
     }

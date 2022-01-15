@@ -62,6 +62,8 @@ public class SearchController implements Initializable {
         loadGen();
     }
 
+
+    //lad ra thế hệ con
     public void load(){
         ObservableList<PersonModel> listPerson = FXCollections.observableArrayList();
         List<PersonModel> list = personDao.getName(txtName.getText());
@@ -71,6 +73,8 @@ public class SearchController implements Initializable {
         personTable.setItems(listPerson);
     }
 
+
+    // load những người cùng thế hệ
     public void loadGen(){
         ObservableList<PersonModel> listPerson = FXCollections.observableArrayList();
         genTable.setItems(null);
